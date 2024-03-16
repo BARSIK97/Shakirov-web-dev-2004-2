@@ -1,0 +1,17 @@
+body {
+    text-align: justify;
+    font-size: 1.1rem;
+    min-height: 100vh;
+    font-family: 'Comfortaa';
+}
+
+
+.post {
+    box-sizing: border-box;
+}
+
+
+.footer-line {
+    opacity: 1;
+    margin: 0;
+}
