@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Лабораторная работа №2">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+  
+  <title>
+    {% if title %}
+    {{ title }}
+    {% else %}
+    Лабораторная работа №2
+    {% endif %}
+  </title>
+</head>
+<body class="d-flex flex-column">
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid bg-light">
+        <a class="navbar-brand" href="{{ url_for('index')}}">Лабораторная работа №2</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link {% if request.endpoint == 'URLpar' %} active {% endif %}" href="{{ url_for('URLpar', parameter1=1)}}">Параметры URL</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.endpoint == 'headers' %} active {% endif %}" href="{{ url_for('headers', parameter1=1)}}">Заголовки запроса</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.endpoint == 'cookie' %} active {% endif %}" href="{{ url_for('cookie')}}">Cookie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.endpoint == 'formpar' %} active {% endif %}" href="{{ url_for('formpar')}}">Параметры формы</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link {% if request.endpoint == 'phone' %} active {% endif %}" href="{{ url_for('phone')}}">Проверка формы номера телефона</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+  
+  <main class="container mt-3">
+    {% block content %}
+    <h1 class="text-center">Главная страница</h1>
+    <div class="line"></div>
+    {% endblock content %}
+  </main>
+
+  <footer class="container-fluid text-center py-3 px-0 mt-auto">
+    <hr class="footer-line pb-4">
+    <p>Шакиров Раиль Линарович 221-3210</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
