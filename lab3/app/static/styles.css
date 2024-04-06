@@ -1,15 +1,11 @@
 body {
+    font-family: "Poppins", sans-serif;
     text-align: justify;
     font-size: 1.1rem;
     min-height: 100vh;
-    font-family: 'Comfortaa';
-}
-
-.post {
-    box-sizing: border-box;
 }
 
 .footer-line {
-    opacity: 1;
+    opacity: 2.00;
     margin: 0;
 }
