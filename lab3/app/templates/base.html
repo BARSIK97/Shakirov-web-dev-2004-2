@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
-              <a class="nav-link {% if request.endpoint == 'login' %} active {% endif %}" href="{{ url_for('login')}}">Аутентификация</a>
+              <a class="nav-link {% if request.endpoint == 'auth' %} active {% endif %}" href="{{ url_for('auth')}}">Аутентификация</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {% if request.endpoint == 'logout' %} active {% endif %}" href="{{ url_for('logout')}}">Выйти из аккаунта</a>
