@@ -29,6 +29,7 @@ class User(UserMixin):
     def get_id(self):
         return str(self.id)
 
+
 @login_manager.user_loader
 def load_user(user_id):
     if user_id in users:
@@ -43,6 +44,7 @@ def login_required_with_message(f):
             return redirect(url_for('login', next=request.url))
         return f(*args, **kwargs)
     return decorated_function
+
 
 @app.route('/')
 def index():
