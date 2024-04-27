@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% from 'user_macros.html' import user_form %}
+
+{% block content %}
+    <h2>Добавление пользователя</h2>
+    {{ user_form(roles, 'create', user, errors) }}
+    {% if errors %}
+        <div class="alert alert-danger" role="alert">
+            Ошибки:
+            <ul>
+                {% for field, error in errors.items() %}
+                    <li>{{ error }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    {% endif %}
+{% endblock %}
