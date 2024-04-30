@@ -14,10 +14,7 @@ def phonecheck(phone: str) -> str:
 def phoneformat(phone: str) -> str:
     phone = ''.join(filter(str.isdigit, phone))
 
-    if phone.startswith("7"):
-        phone = phone[1:]
-
-    elif phone.startswith("8"):
+    if len(phone) == 11:
         phone = phone[1:]
 
     return f"8-{phone[:3]}-{phone[3:6]}-{phone[6:8]}-{phone[8:10]}"
