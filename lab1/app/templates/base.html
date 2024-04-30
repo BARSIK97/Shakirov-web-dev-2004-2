@@ -20,11 +20,11 @@
       {% if title %}
       {{ title }}
       {% else %}
-      ЛР №1
+      Лабораторная работа №1
       {% endif %}
     </title>
 </head>
-<body>
+<body class="d-flex flex-column">
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
@@ -59,8 +59,8 @@
     {% endblock content %}
   </main>
 
-  <footer class="container-fluid py-3 px-0 mt-auto bg-light">
-    <hr>
+   <footer class="container-fluid text-center py-3 px-0 mt-auto">
+     <hr class="footer-line pb-4">
     <p class="m-3">Шакиров Раиль Линарович 221-3210</p>
   </footer>
 
@@ -70,6 +70,5 @@
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-{#<!-- <script src="{{ url_for('static', filename='scripts/main.js')}}"></script> -->#}
 
 </html>
